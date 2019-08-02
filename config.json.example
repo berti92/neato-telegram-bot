@@ -1,0 +1,6 @@
+{
+    "telegram_token": "", //string - token for the telegram bot
+    "chat_id": , //int - telegram chat id (only in this chat is the communication between neato and telegram allowed)
+    "neato_url": "", //string - the url to your websocket on your neato/esp8266 for example http://192.168.10.36:81
+    "lang": "de" //string - language en or de
+}

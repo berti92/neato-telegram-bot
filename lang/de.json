@@ -1,0 +1,13 @@
+{
+    "start_text": "Mit /help bekommst du einen Überblick über die Befehle!",
+    "help_text": "/akku gibt den Akkustand aus\n/meldung gibt aktuelle Fehlermeldungen aus\n/log gibt das Log des Staubsaugers aus\n/reinigen startet den Reinigungsvorgang\n/stop stoppt den Reinigungsvorgang",
+    "battery_action": "akku",
+    "err_action": "meldung",
+    "log_action": "log",
+    "clean_action": "reinigen",
+    "stop_action": "stop",
+    "loading": "wird geladen...",
+    "not_loading": "wird nicht geladen...",
+    "clean_answer": "Ok, ich fahre los...",
+    "clean_stop_answer": "Reinigung abgebrochen..."
+}

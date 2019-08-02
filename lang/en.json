@@ -1,0 +1,13 @@
+{
+    "start_text": "With /help you get an overview about all possible commands!",
+    "help_text": "/battery shows your the current battery percantage\n/info shows you current errors or callbacks from the neato\n/log shows you the last logs of the neato\n/clean starts the cleaning process\n/stop stops the current cleaning process",
+    "battery_action": "battery",
+    "err_action": "info",
+    "log_action": "log",
+    "clean_action": "clean",
+    "stop_action": "stop",
+    "loading": "loading...",
+    "not_loading": "not loading...",
+    "clean_answer": "Alright, I start cleaning...",
+    "clean_stop_answer": "Cleaning stopped..."
+}
