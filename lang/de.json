@@ -1,8 +1,10 @@
 {
     "start_text": "Mit /help bekommst du einen Überblick über die Befehle!",
-    "help_text": "/akku gibt den Akkustand aus\n/meldung gibt aktuelle Fehlermeldungen aus\n/log gibt das Log des Staubsaugers aus\n/reinigen startet den Reinigungsvorgang\n/stop stoppt den Reinigungsvorgang",
+    "help_text": "/akku gibt den Akkustand aus\n/meldung gibt aktuelle Fehlermeldungen aus\n/log gibt das Log des Staubsaugers aus\n/reinigen startet den Reinigungsvorgang\n/stop stoppt den Reinigungsvorgang\n/dellog löscht alle Fehlermeldungen",
     "battery_action": "akku",
     "err_action": "meldung",
+    "res_err_action": "dellog",
+    "res_answer": "gelöscht",
     "log_action": "log",
     "clean_action": "reinigen",
     "stop_action": "stop",

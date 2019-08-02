@@ -17,18 +17,19 @@ connection.onmessage = e => {
 
 bot.start((ctx) => ctx.reply(lang.start_text))
 bot.help((ctx) => ctx.reply(lang.help_text))
-bot.command(lang.battery_action, (ctx) => communicateNeato('getCharger', ctx))
-bot.command(lang.err_action, (ctx) => communicateNeato('getErr', ctx))
+bot.command(lang.battery_action, (ctx) => communicateNeato('GetCharger', ctx))
+bot.command(lang.err_action, (ctx) => communicateNeato('GetErr', ctx))
+bot.command(lang.res_err_action, (ctx) => communicateNeato('GetErr Clear', ctx))
 bot.command(lang.log_action, (ctx) => communicateNeato('GetLifeStatLog', ctx))
 bot.command(lang.clean_action, (ctx) => communicateNeato('Clean', ctx))
 bot.command(lang.stop_action, (ctx) => communicateNeato('Clean', ctx))
 bot.launch()
 
 function communicateNeato(command, ctx) {
-    console.log(ctx.chat)
+    console.log(ctx.from, '[' + new Date().toUTCString() + ']')
     if (ctx.chat.id == config.chat_id) {
         switch(command) {
-            case 'getCharger':
+            case 'GetCharger':
                 connection.send(command)
                 connection.onmessage = e => {
                     var output = ""
@@ -41,7 +42,7 @@ function communicateNeato(command, ctx) {
                     ctx.reply(output)
                 }
                 break
-            case 'getErr':
+            case 'GetErr':
                 connection.send(command)
                 connection.onmessage = e => {
                     var output = "Meldung:"
@@ -67,6 +68,12 @@ function communicateNeato(command, ctx) {
                 connection.send(command)
                 connection.onmessage = e => {
                     ctx.reply(e.data.split("\n").slice(1).join("\n"))
+                }
+                break
+            case 'GetErr Clear':
+                connection.send(command)
+                connection.onmessage = e => {
+                    ctx.reply(lang.res_answer)
                 }
                 break
         }
